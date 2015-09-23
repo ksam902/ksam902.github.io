@@ -74,6 +74,9 @@ h1 a i {
 h1 a i:hover {
     color: #767676 !important;
 }
+.thumnail-image-icons{
+    margin-top: 2%;
+}
 /*.pull-left{
     float: left;
 }
