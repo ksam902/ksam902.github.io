@@ -8,22 +8,61 @@
   <link rel="stylesheet" href="stylesheets/stylesheet.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-
-<div class="container col-md-16">
-Hello World
-
+<div id="wrap">
+  
+<header class="masthead banner">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-6 banner-main">
+        <h1>A Collection of Sorts
+          <p class="lead banner-username">{ <i class="fa fa-github"></i> ksam902 }</p></h1>
+      </div>
+    </div>
+    </div>
+</header>
+  
+  
+<!-- Fixed navbar -->
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="https://github.com/ksam902" target="_blank">{ <i class="fa fa-github"></i> }</a></li>
+          <li><a href="https://twitter.com/_ksamson" target="_blank">{ <i class="fa fa-twitter-square"></i> }</a></li>
+          <li><a href="https://ca.linkedin.com/in/samsonkyle" target="_blank">{ <i class="fa fa-linkedin-square"></i> }</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="container col-md-16" id="projects">
+    <div class="row page-header">
+	    <h1>Projects : <small><i class="fa fa-apple"></i> / <i class="fa fa-wordpress"></i> / <i class="fa fa-html5"></i> / <i class="fa fa-gamepad"></i></small></h1>
+    </div>
 	<div class="row">
 	  <div class="col-sm-6 col-md-4">
 	    <div class="thumbnail">
+	    <a href="willy-the-worm/" class="no-decoration text-center">
+	    	<h3>Willy The Worm</h3>
+	    	<h5><small>Survival of the Wormiest</small></h5>
+	    	<h5><small>{ <i class="fa fa-gamepad"></i> / <i class="fa fa-html5"></i> }</small></h5>
+	    </a>
+	    <hr>
 	      <a href="willy-the-worm/"><img src="images/willy-the-worm-thumbnail.png" alt="Willy the Worm Thumbnail" class="img-responsive img-rounded"></a>
 	      <div class="caption">
-	      	<hr>
-	        <h3>Willy The Worm</h3>
-	        <h5>Survival of the Wormiest</h5>
-	        <p>HTML5 game built using CreateJS. Willy is surrounded by a swarm of hungry birds looking to make him his next meal. Keep Willy alive for as long as you can using his amazing archery skills.</p>
-	        <p><a href="willy-the-worm/" class="btn btn-default" role="button">Play Willy The Worm!</a></p>
+	    <hr>
+	        <p>Willy is surrounded by a swarm of hungry birds looking to make him their next meal. Keep Willy alive for as long as you can using his amazing archery skills.</p>
 	      </div>
 	    </div>
 	  </div>
