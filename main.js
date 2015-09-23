@@ -1,5 +1,4 @@
 $( document ).ready(function() {/* affix the navbar after scroll below header */
-	console.log('hosfkdlhflshd');
 	$('#nav').affix({
 	      offset: {
 	        top: $('header').height()-$('#nav').height()
@@ -20,4 +19,5 @@ $( document ).ready(function() {/* affix the navbar after scroll below header */
 	  var posi = $(link).offset().top+20;
 	  $('body,html').animate({scrollTop:posi},700);
 	})
+	$('[data-toggle="popover"]').popover()
 });
