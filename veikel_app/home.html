@@ -11,81 +11,91 @@
         <title>VEIKEL</title>
     </head>
     <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top animate">
-    <div class="container navbar-more visible-xs">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit">Submit</button>
-            </span>
+      <nav class="navbar navbar-inverse navbar-fixed-top animate">
+          <div class="container navbar-more visible-xs">
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Submit</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+            <ul class="nav navbar-nav">
+              <li><a href="#">PROFILE</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">ABOUT</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">HOW IT WORKS</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">BECOME A PRO</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">HELP</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#"><i class="fa fa-gears fa-small"></i> SETTINGS</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">LOG OUT</a></li>
+            </ul>
           </div>
-        </div>
-      </form>
-      <ul class="nav navbar-nav">
-        <li><a href="#">PROFILE</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">ABOUT</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">HOW IT WORKS</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">BECOME A PRO</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">HELP</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#"><i class="fa fa-gears fa-small"></i> SETTINGS</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">LOG OUT</a></li>
-      </ul>
-    </div>
-    <div class="container">
-      <div class="navbar-header hidden-xs">
-        <a class="navbar-brand" href="#"><img alt="Brand" src="assets/images/veikel-logo.png"></a>
-      </div>
+          <div class="container">
+            <div class="navbar-header hidden-xs">
+              <a class="navbar-brand" href="home.html"><img alt="Brand" src="assets/images/veikel-logo.png"></a>
+            </div>
 
-      <ul class="nav navbar-nav navbar-right mobile-bar">
-        <li>
-          <a href="upcoming.html">
-            <span class="menu-icon fa fa-calendar"></span>
-            UP <span class="badge">2</span><span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="menu-icon fa fa-clock-o"></span>
-            <span class="hidden-xs">PEN</span>
-            <span class="visible-xs">PEN</span>
-          </a>
-        </li>
-        <li class="hidden-xs">
-          <a href="#">
-            <span class="menu-icon fa fa-picture-o"></span>
-            NO <span class="badge">4</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="menu-icon fa fa-pencil"></span>
-            Post
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="menu-icon fa fa-phone"></span>           
-            <span class="hidden-xs">Contact Us</span>
-            <span class="visible-xs">Contact</span>
-          </a>
-        </li>
-        <li class="visible-xs">
-          <a href="#navbar-more-show">
-            <span class="menu-icon fa fa-bars"></span>
-            More
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+            <ul class="nav navbar-nav navbar-right mobile-bar">
+              <li>
+                <a href="upcoming.html">
+                  <span class="menu-icon fa fa-calendar"></span>
+                  <span class="hidden-xs">UPCOMING <span class="badge">2</span><span class="sr-only">(current)</span></span>
+                  <span class="visible-xs"><span class="badge">2</span><span class="sr-only">(current)</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="pending.html">
+                  <span class="menu-icon fa fa-clock-o"></span>
+                  <span class="hidden-xs">PENDING <span class="badge">5</span></span>
+                  <span class="visible-xs"><span class="badge">5</span></span>
+                </a>
+              </li>
+              <li class="hidden-xs">
+                <a href="notifications.html">
+                  <span class="menu-icon fa fa-picture-o"></span>
+                  <span class="hidden-xs">NOTIFICATIONS <span class="badge">5</span></span>
+                  <span class="visible-xs"><span class="badge">5</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="singleProfile.html">
+                  <span class="menu-icon fa fa-bars"></span>
+                  <span class="hidden-xs">SINGLE PROFILE</span>
+                  <span class="visible-xs">PROFILE</span>
+                </a>
+              </li>
+              <li>
+                <a href="newAppointment.html">
+                  <span class="menu-icon fa fa-bars"></span>
+                  <span class="hidden-xs">NEW APPOINTMENT</span>
+                  <span class="visible-xs">POST</span>
+                </a>
+              </li>
+              <li>
+                <a href="timeline.html">
+                  <span class="menu-icon fa fa-bars"></span>
+                  <span class="hidden-xs">HISTORY OF JOBS</span>
+                  <span class="visible-xs">HISTORY</span>
+                </a>
+              </li>
+              <li class="visible-xs">
+                <a href="#navbar-more-show">
+                  <span class="menu-icon fa fa-bars"></span>
+                  More
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <div class="row alert-messages">
           <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
