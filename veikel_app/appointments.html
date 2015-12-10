@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+<!--         <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+        <title>COMPANY NAME</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top animate">
+          <div class="container navbar-more visible-xs">
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Submit</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+            <ul class="nav navbar-nav">
+              <li><a href="#">PROFILE</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">ABOUT</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">HOW IT WORKS</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">BECOME A PRO</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">HELP</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#"><i class="fa fa-gears fa-small"></i> SETTINGS</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">LOG OUT</a></li>
+            </ul>
+          </div>
+          <div class="container">
+            <div class="navbar-header hidden-xs">
+              <a class="navbar-brand" href="home.html"><img alt="Brand" src="assets/images/veikel-logo.png"></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right mobile-bar">
+              <li>
+                <a href="newAppointment.html">
+                  <span class="menu-icon fa fa-pencil"></span>
+                  <span class="hidden-xs">Create New Appointment</span>
+                  <span class="visible-xs">New</span>
+                </a>
+              </li>
+              <li>
+                <a href="upcoming.html">
+                  <span class="menu-icon fa fa-calendar"></span>
+                  <span class="hidden-xs">Appointments</span>
+                  <span class="visible-xs">Appointments</span>
+                </a>
+              </li>
+              <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-envelope"></span> 2<span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-envelope" role="menu">
+                  <span class="item">
+                    <span class="">
+                        <span class="glyphicon glyphicon-envelope"></span>
+
+                    </span>
+                    <span class="item-right">
+                        <span class="item-info">
+                            Notification
+                        </span>
+                    </span>
+                </span>
+              </li>
+          </ul>
+        </li>
+              <!-- <li class="hidden-xs"> -->
+              <li>
+                <a href="profile.html">
+                  <span class="hidden-xs"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" class="img-circle img-thumbnail img-responsive navbar-profile-image" /> Kyle Samson</span>
+                  <span class="visible-xs"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" class="img-circle img-thumbnail img-responsive navbar-profile-image" /></span>
+                </a>
+              </li>
+              <li class="visible-xs">
+                <a href="#navbar-more-show">
+                  <span class="menu-icon fa fa-bars"></span>
+                  More
+                </a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+          <div class="container">
+            <div class="page-header text-center">
+              <p><small><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">NEW LISTING</a></small></p>
+            </div>
+          </div>
+          <div class="container">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#create" aria-controls="create" role="tab" data-toggle="tab">Create New Appointment</a></li>
+              <li role="presentation"><a href="#scheduled" aria-controls="scheduled" role="tab" data-toggle="tab">Scheduled Appointments</a></li>
+              <li role="presentation"><a href="#pending" aria-controls="pending" role="tab" data-toggle="tab">Pending Appointments</a></li>
+              <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Appointment History</a></li>
+            </ul>
+            <!-- TAB PANES -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="create">
+                <div class="container appt-container">
+                  <div class="row">
+                    <div id="users-management" class="col-md-8">
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-1"><img src="http://lorempixel.com/128/128/people/?1" class="img-circle">
+                              Main Service Category
+                              </a>
+                              <div class="btn-group pull-right"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-1"><i class="fa fa-chevron-down"></i></a></div>
+                            </h4>
+                          </div>
+                          <div id="collapse-1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <img src="http://lorempixel.com/128/128/people/?1" class="pull-left img-circle">
+                              <form class="form-horizontal">
+                                <fieldset>
+                                <!-- Form Name -->
+                                <!-- <legend>Form Name</legend> -->
+                                <!-- Multiple Radios -->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="main-cat-rads">Main Category Sub Categories</label>
+                                  <div class="col-md-4">
+                                  <div class="radio">
+                                    <label for="main-cat-rads-0">
+                                      <input type="radio" name="main-cat-rads" id="main-cat-rads-0" value="1" checked="checked">
+                                      Sub Category 1
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label for="main-cat-rads-1">
+                                      <input type="radio" name="main-cat-rads" id="main-cat-rads-1" value="2">
+                                      Sub Category 2
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
+                                </fieldset>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="users-management" class="col-md-8">
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-1"><img src="http://lorempixel.com/128/128/people/?1" class="img-circle">
+                              Second Service Category
+                              </a>
+                              <div class="btn-group pull-right"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-1"><i class="fa fa-chevron-down"></i></a></div>
+                            </h4>
+                          </div>
+                          <div id="collapse-1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <img src="http://lorempixel.com/128/128/people/?1" class="pull-left img-circle">
+                              <form class="form-horizontal">
+                                <fieldset>
+                                <!-- Form Name -->
+                                <!-- <legend>Form Name</legend> -->
+                                <!-- Multiple Radios -->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="main-cat-rads">Main Category Sub Categories</label>
+                                  <div class="col-md-4">
+                                  <div class="radio">
+                                    <label for="main-cat-rads-0">
+                                      <input type="radio" name="main-cat-rads" id="main-cat-rads-0" value="1" checked="checked">
+                                      Sub Category 1
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label for="main-cat-rads-1">
+                                      <input type="radio" name="main-cat-rads" id="main-cat-rads-1" value="2">
+                                      Sub Category 2
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
+                                </fieldset>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="users-management" class="col-md-8">
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-1"><img src="http://lorempixel.com/128/128/people/?1" class="img-circle">
+                              Third Service Category
+                              </a>
+                              <div class="btn-group pull-right"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-1"><i class="fa fa-chevron-down"></i></a></div>
+                            </h4>
+                          </div>
+                          <div id="collapse-1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <img src="http://lorempixel.com/128/128/people/?1" class="pull-left img-circle">
+                              <form class="form-horizontal">
+                                <fieldset>
+                                <!-- Form Name -->
+                                <!-- <legend>Form Name</legend> -->
+                                <!-- Multiple Radios -->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="main-cat-rads">Main Category Sub Categories</label>
+                                  <div class="col-md-4">
+                                  <div class="radio">
+                                    <label for="main-cat-rads-0">
+                                      <input type="radio" name="main-cat-rads" id="main-cat-rads-0" value="1" checked="checked">
+                                      Sub Category 1
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label for="main-cat-rads-1">
+                                      <input type="radio" name="main-cat-rads" id="main-cat-rads-1" value="2">
+                                      Sub Category 2
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
+                                </fieldset>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="scheduled">
+                  <div class="container appt-container">
+                      <div class="row thumbnails row-centered">
+                        <div class="col-sm-4 col-md-4 col-centered">
+                          <div class="thumbnail text-center">
+                           <div class="panel panel-default">
+                          <div class="panel-image">
+                              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" class="img-circle img-thumbnail img-responsive upcoming-tech-image" />
+                              <h5>Mike McKenzie</h5>
+                              <label for="toggle-1"></label>
+                          </div>
+                          <input type="checkbox" id="toggle-1" class="panel-image-toggle">
+                          <div class="panel-body">
+                            <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                            </i></cite></small>
+                            <p>
+                                <i class="glyphicon glyphicon-envelope"></i> email@example.com
+                                <br />
+                                <i class="glyphicon glyphicon-globe"></i> <a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                                <br />
+                                <i class="glyphicon glyphicon-gift"></i> June 02, 1988</p>
+                          </div>
+                          <div class="panel-footer text-center">
+                              <p class="btn btn-default btn-xs btn-lg pull-center" rel="tooltip">
+                                <i class="fa fa-staar"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                              </p>
+                                <a href="singleProfile.html"><span class="fa fa-user"></span></a>
+                                <a href="#" data-toggle="modal" data-target="#myModal"><span class="fa fa-envelope"></span></a>
+                          </div>
+                            <div class="caption">
+                              <h4><span class="label label-success">IN PROGRESS</span></h4><hr>
+                              <h4><a href="#">PAINTING • EXTERIOR HOUSE</a></h4>
+                              <p><small>NOVEMBER 30th, 2015 | MORNING</small></p>
+                            </div>
+                            <div>
+                            <p class="caption-footer">
+                                <a class="btn icon-btn btn-info" href="#" data-toggle="modal" data-target="#vwPostingMd"><span class="glyphicon btn-glyphicon glyphicon-eye-open img-circle text-info"></span>VIEW</a>
+                                <a class="btn icon-btn btn-danger" href="#" data-toggle="modal" data-target="#vwDeleteMd"><span class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span>DELETE</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="pending">          
+                <div class="container appt-container">
+                  <p class="lead">Job Title</p>
+                  <div class="row">
+                    <div id="users-management" class="col-md-8">
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-3"><img src="http://lorempixel.com/128/128/people/?1" class="img-circle">
+                              John Doe <small>(johndoe)</small>
+                              </a>
+                              <div class="btn-group pull-right">CURRENT BID : $$$$</div>
+                            </h4>
+                          </div>
+                          <div id="collapse-3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <img src="http://lorempixel.com/128/128/people/?1" class="pull-left img-circle">
+                              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                              </p>
+                              <p>beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                                probably haven't heard of them accusamus labore sustainable VHS.
+                              </p>
+                               <p class="btn btn-default btn-xs btn-lg pull-center" rel="tooltip"><i class="fa fa-staar"></i><i
+                                      class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i
+                                      class="fa fa-star-o"></i></p>
+                                      <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-footer">
+                              <div class="btn-group btn-group-xs"><span class="btn">Actions: </span><a class="btn btn-success" href="#"><i class="fa fa-thumbs-up"></i> Add reputation</a> <a class="btn btn-danger" href="#"><i class="fa fa-thumbs-down"></i> Decrease reputation</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="history">
+                <div class="container appt-container">
+                  <p class="lead">Job Title</p>
+                  <div class="row">
+                    <div id="users-management" class="col-md-8">
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapse-2"><img src="http://lorempixel.com/128/128/people/?1" class="img-circle">
+                              Josh Hutchings <small>(jHutch902)</small>
+                              </a>
+                              <div class="btn-group pull-right"><small>Completed : May 24th, 2015</small></div>
+                            </h4>
+                          </div>
+                          <div id="collapse-2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <img src="http://lorempixel.com/128/128/people/?1" class="pull-left img-circle">
+                              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                              </p>
+                              <p>beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                                probably haven't heard of them accusamus labore sustainable VHS.
+                              </p>
+                               <p class="btn btn-default btn-xs btn-lg pull-center" rel="tooltip"><i class="fa fa-staar"></i><i
+                                      class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i
+                                      class="fa fa-star-o"></i></p>
+                                      <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-footer">
+                              <div class="btn-group btn-group-xs"><span class="btn">Actions: </span><a class="btn btn-success" href="#"><i class="fa fa-thumbs-up"></i> Leave Rating</a> <a class="btn btn-danger" href="#"><i class="fa fa-thumbs-down"></i> Decrease reputation</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        <!-- EMAIL MODAL -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Compose Message</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2" for="inputTo">To</label>
+                    <div class="col-sm-10"><input class="form-control" id="inputTo" placeholder="List of recipients" type="email"></div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2" for="inputSubject">Subject</label>
+                    <div class="col-sm-10"><input class="form-control" id="inputSubject" placeholder="Subject" type="text"></div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-12" for="inputBody">Message</label>
+                    <div class="col-sm-12"><textarea class="form-control" id="inputBody" rows="8"></textarea></div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button> 
+                <button type="button" class="btn btn-warning pull-left">Save Draft</button>
+                <button type="button" class="btn btn-primary ">Send <i class="fa fa-arrow-circle-right fa-lg"></i></button>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VIEW MODAL -->
+          <div class="modal fade" id="vwPostingMd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">THIS WILL SHOW JOB DETAILS</h4>
+                </div>
+                <div class="modal-body">
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- DELETE MODAL -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">CANCEL</h4>
+                </div>
+                <div class="modal-body">
+                  
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+<!--           <div class="custom-footer">
+              <p>FOOTER JAZZ WILL GO HERE</p>
+          </div> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </body>
+</html>
