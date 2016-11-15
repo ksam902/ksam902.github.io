@@ -16,3 +16,17 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width : 768px) and (max-device-width: 1024px) {
+    .jumbotron{
+        font-size: 50px;
+    }
+}
+
+/* iPhone [portrait + landscape] */
+@media screen and (max-device-width: 480px) {
+    .jumbotron{
+        font-size: 25px;
+    }
+}
