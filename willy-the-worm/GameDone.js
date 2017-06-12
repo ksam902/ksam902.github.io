@@ -909,7 +909,7 @@ function onAddBird(e) {
 
 function onTick(e) {
     // TESTING FPS
-    document.getElementById("fps").innerHTML = createjs.Ticker.getMeasuredFPS();
+    // document.getElementById("fps").innerHTML = createjs.Ticker.getMeasuredFPS();
 
     if(willy.getIsBirdKilled()){
         //play bird dies sound
@@ -961,4 +961,3 @@ function onTick(e) {
     // update the stage!
     stage.update();
 }
-
