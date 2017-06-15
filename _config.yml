@@ -1,0 +1,36 @@
+# site settings
+title: Kyle Samson
+subtitle: Developer
+email: kylesamson21@gmail.com
+# description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+baseurl: ""
+url: "http://kylesamson.ca" # the base hostname & protocol for your site
+author:
+street_address:
+city: Halifax
+state: NS
+zip_code:
+country: Canada
+phone:
+
+# homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 2
+
+# social settings
+500px_url:
+facebook_url:
+github_url: https://github.com/ksam902
+gitlab_url:
+googleplus_url:
+instagram_url: https://www.instagram.com/ksaminsta/
+linkedin_url: https://www.linkedin.com/in/samsonkyle
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/_ksamson
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
