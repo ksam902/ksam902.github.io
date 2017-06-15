@@ -3,5 +3,7 @@ layout: post
 title: Willy The Worm
 description: HTML5 Game | Create.js
 image:
-permalink: willy-the-worm
+permalink: /game/willy-the-worm
 ---
+
+[Play Game](/willy-the-worm)
