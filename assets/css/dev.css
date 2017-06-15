@@ -26,6 +26,18 @@
 	100% { opacity:1; }
 }
 
+#banner .img-content {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 35%;
+    transform: translate(50%, 0);
+}
+
+#banner .content img {
+    height:100%;
+}
+
 #wtw-main{
     margin: auto;
 }
