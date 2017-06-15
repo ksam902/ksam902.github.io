@@ -16,15 +16,24 @@
         	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
         	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="../assets/css/willy-the-worm.css" />
         <script type="text/javascript" src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
         <script type="text/javascript" src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
         <script type="text/javascript" src="http://code.createjs.com/soundjs-0.5.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-        <!-- <script type="text/javascript" src="ndgmr.Collision.js"></script>
-        <script type="text/javascript" src="Manifest.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/ndgmr.Collision.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/Manifest.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/AssetManager.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/Projectile.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/GameDone.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/Cloud.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/Bird.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/Willy.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/Mover.js"></script>
+        <script src="http://localhost:4000/assets/js/willy-the-worm/MoverDiagonal.js"></script>
+        <!-- <script type="text/javascript" src="ndgmr.Collision.js"></script> -->
+        <!-- <script type="text/javascript" src="Manifest.js"></script>
         <script type="text/javascript" src="AssetManager.js"></script>
         <script type="text/javascript" src="Projectile.js"></script>
         <script type="text/javascript" src="GameDone.js"></script>
@@ -113,18 +122,15 @@
     			<h1>Willy The Worm</h1>
     		</header>
     		<!-- <span class="image main"><img src="/assets/images/wtw1.gif" alt="" /></span> -->
-    		<p><p><a href="/willy-the-worm">Play Game</a></p>
+    		<p><!-- [Play Game](/willy-the-worm) -->
 </p>
+            <div id="wtw-main">
+                <h2>Willy Needs Your Help!</h2>
+                <canvas id="wtw-stage"></canvas>
+                <div id="wtw-fps"></div>
+            </div>
     	</div>
     </section>
-    <div>
-      <button id="btnBegin" type="button" class="btn btn-default">Take Me To Willy!</button>
-    </div>
-    <div id="main" class="container col-md-16">
-        <h2>Willy Needs Your Help!</h2>
-        <canvas id="stage"></canvas>
-        <div id="fps"></div>
-    </div>
 
     </div>
 
