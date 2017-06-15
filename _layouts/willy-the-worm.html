@@ -2,19 +2,19 @@
 
 <html>
     <head>
-        	<title>{{ site.title }}</title>
-        	<meta charset="utf-8" />
-        	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    	<title>{{ site.title }}</title>
+    	<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-        	<link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png" sizes="32x32">
-            <link rel="icon" type="image/png" href="../assets/images/favicon-16x16.png" sizes="16x16">
+    	<link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../assets/images/favicon-16x16.png" sizes="16x16">
 
-        	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-        	<!--[if lte IE 8]><script src="{{ "assets/js/ie/html5shiv.js" | relative_url }}"></script><![endif]-->
-        	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
-        	<link rel="stylesheet" href="{{ "assets/css/dev.css" | relative_url }}" />
-        	<!--[if lte IE 9]><link rel="stylesheet" href="{{ "assets/css/ie9.css" | relative_url }}" /><![endif]-->
-        	<!--[if lte IE 8]><link rel="stylesheet" href="{{ "assets/css/ie8.css" | relative_url }}" /><![endif]-->
+    	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    	<!--[if lte IE 8]><script src="{{ "assets/js/ie/html5shiv.js" | relative_url }}"></script><![endif]-->
+    	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
+    	<link rel="stylesheet" href="{{ "assets/css/dev.css" | relative_url }}" />
+    	<!--[if lte IE 9]><link rel="stylesheet" href="{{ "assets/css/ie9.css" | relative_url }}" /><![endif]-->
+    	<!--[if lte IE 8]><link rel="stylesheet" href="{{ "assets/css/ie8.css" | relative_url }}" /><![endif]-->
 
         <script type="text/javascript" src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
         <script type="text/javascript" src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
@@ -32,48 +32,36 @@
         <script src="{{ "assets/js/willy-the-worm/Willy.js" | absolute_url }}"></script>
         <script src="{{ "assets/js/willy-the-worm/Mover.js" | absolute_url }}"></script>
         <script src="{{ "assets/js/willy-the-worm/MoverDiagonal.js" | absolute_url }}"></script>
-        <!-- <script type="text/javascript" src="ndgmr.Collision.js"></script> -->
-        <!-- <script type="text/javascript" src="Manifest.js"></script>
-        <script type="text/javascript" src="AssetManager.js"></script>
-        <script type="text/javascript" src="Projectile.js"></script>
-        <script type="text/javascript" src="GameDone.js"></script>
-        <script type="text/javascript" src="Cloud.js"></script>
-        <script type="text/javascript" src="Bird.js"></script>
-        <script type="text/javascript" src="Willy.js"></script>
-        <script type="text/javascript" src="Mover.js"></script>
-        <script type="text/javascript" src="MoverDiagonal.js"></script>
         <script type="text/javascript">
             //entry point when page is loaded
             window.addEventListener("load", onSetup);
             function onSetup(e){
                 onInit();
             }
-        </script> -->
+        </script>
 	</head>
     <body>
         {% include header.html %}
 
+        <!-- Main -->
+        <div id="main" class="alt">
 
-    <!-- Main -->
-    <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+        	<div class="inner">
+        		<header class="major">
+        			<h1>{{ page.title }}</h1>
+        		</header>
+        		<!-- {% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %} -->
+        		<p>{{ content }}</p>
+                <div id="wtw-main">
+                    <canvas id="wtw-stage"></canvas>
+                    <div id="wtw-fps"></div>
+                </div>
+        	</div>
+        </section>
 
-    <!-- One -->
-    <section id="one">
-    	<div class="inner">
-    		<header class="major">
-    			<h1>{{ page.title }}</h1>
-    		</header>
-    		<!-- {% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %} -->
-    		<p>{{ content }}</p>
-            <div id="wtw-main">
-                <h2>Willy Needs Your Help!</h2>
-                <canvas id="wtw-stage"></canvas>
-                <div id="wtw-fps"></div>
-            </div>
-    	</div>
-    </section>
-
-    </div>
+        </div>
 
         {% include footer.html %}
 
