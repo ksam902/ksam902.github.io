@@ -6,4 +6,5 @@ image: assets/images/wtw1.gif
 permalink: /game/willy-the-worm
 ---
 
-<!-- [Play Game](/willy-the-worm) -->
+
+Willy the Worm is a HTML canvas desktop game created using the Create.js suite of tools.

@@ -38,6 +38,11 @@
     height:100%;
 }
 
+.skills{
+    width: 100%;
+    cursor: default;
+}
+
 #wtw-main{
     margin: auto;
 }
@@ -51,4 +56,17 @@
     margin-right: auto;
     display: block;
     /*width: 800px;*/
+}
+
+.wtw-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #wtw-main{
+        display: none;
+    }
+    .wtw-mobile{
+        display: block;
+    }
 }
