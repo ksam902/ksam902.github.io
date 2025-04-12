@@ -8,20 +8,20 @@ const About = () => {
               About Me
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              I&apos;m a Development Tech Lead with over a decade of experience building scalable, 
-              high-performance web applications. My journey in technology has allowed me to work with 
-              a diverse range of industries and technologies.
+              I&apos;m a Development Tech Lead with over a decade of experience building scalable,
+              high-performance web applications. My journey in technology has allowed me to work
+              with a diverse range of industries and technologies.
             </p>
             <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              My passion lies in creating elegant solutions to complex problems, optimizing performance,
-              and leading teams to deliver exceptional digital experiences. I value clean code, thoughtful 
-              architecture, and maintainable systems.
+              My passion lies in creating elegant solutions to complex problems, optimizing
+              performance, and leading teams to deliver exceptional digital experiences. I value
+              clean code, thoughtful architecture, and maintainable systems.
             </p>
             <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Outside of coding, I enjoy hiking, reading about emerging technologies, and mentoring 
+              Outside of coding, I enjoy hiking, reading about emerging technologies, and mentoring
               up-and-coming developers.
             </p>
-            
+
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <div className="border-l-4 border-primary pl-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white">Experience</h3>
@@ -29,11 +29,13 @@ const About = () => {
               </div>
               <div className="border-l-4 border-primary pl-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white">Specialization</h3>
-                <p className="text-gray-600 dark:text-gray-300">Front-end architecture, Performance optimization</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Front-end architecture, Performance optimization
+                </p>
               </div>
             </div>
           </div>
-          
+
           <div className="lg:ml-auto">
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
@@ -46,11 +48,15 @@ const About = () => {
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="text-primary text-2xl font-bold mb-2">15+</div>
-                <div className="text-gray-900 dark:text-white font-medium">Technologies Mastered</div>
+                <div className="text-gray-900 dark:text-white font-medium">
+                  Technologies Mastered
+                </div>
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="text-primary text-2xl font-bold mb-2">20+</div>
-                <div className="text-gray-900 dark:text-white font-medium">Team Members Mentored</div>
+                <div className="text-gray-900 dark:text-white font-medium">
+                  Team Members Mentored
+                </div>
               </div>
             </div>
           </div>
@@ -60,4 +66,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
