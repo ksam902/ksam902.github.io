@@ -1,13 +1,20 @@
 import { useRef, useEffect } from 'react';
 import { animate } from 'animejs';
 
-const SocialLinks = () => {
+interface SocialLinksProps {
+  toggleTheme: () => void;
+  theme: 'light' | 'dark';
+  classNames?: string;
+}
+
+const SocialLinks = ({ toggleTheme, theme, classNames = 'flex-col' }: SocialLinksProps) => {
   const githubRef = useRef<HTMLAnchorElement>(null);
   const linkedinRef = useRef<HTMLAnchorElement>(null);
   const contactRef = useRef<HTMLAnchorElement>(null);
+  const themeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const setupPulseAnimation = (element: HTMLAnchorElement) => {
+    const setupPulseAnimation = (element: HTMLAnchorElement | HTMLButtonElement) => {
       const svg = element.querySelector('svg');
 
       if (svg) {
@@ -25,10 +32,11 @@ const SocialLinks = () => {
     if (githubRef.current) setupPulseAnimation(githubRef.current);
     if (linkedinRef.current) setupPulseAnimation(linkedinRef.current);
     if (contactRef.current) setupPulseAnimation(contactRef.current);
+    if (themeButtonRef.current) setupPulseAnimation(themeButtonRef.current);
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 justify-center sm:justify-start">
+    <div className={`flex ${classNames} gap-8 justify-center sm:justify-start`}>
       <a
         ref={githubRef}
         href="https://github.com"
@@ -63,7 +71,8 @@ const SocialLinks = () => {
           ></path>
         </svg>
       </a>
-      <a
+      {/* TODO: Add contact form */}
+      {/* <a
         ref={contactRef}
         href="/contact"
         className="text-gray-600 hover:text-black transition-colors duration-300"
@@ -73,7 +82,33 @@ const SocialLinks = () => {
           <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
           <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
         </svg>
-      </a>
+      </a> */}
+      <button
+        ref={themeButtonRef}
+        onClick={toggleTheme}
+        className="text-gray-600 hover:cursor-pointer hover:text-black dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
+        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        {theme === 'dark' ? (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+        ) : (
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
+        )}
+      </button>
     </div>
   );
 };
