@@ -2,11 +2,24 @@
 
 import { useEffect, useRef } from 'react';
 import { animate, createScope } from 'animejs';
+import { Skeleton } from './ui/skeleton';
 
 interface UnderConstructionProps {
   title?: string;
   message?: string;
   showPlaceholders?: boolean;
+}
+
+export function SkeletonCard() {
+  return (
+    <div className="flex flex-col space-y-3">
+      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+      <div className="space-y-2">
+        <Skeleton className="h-4 w-[250px]" />
+        <Skeleton className="h-4 w-[200px]" />
+      </div>
+    </div>
+  );
 }
 
 const UnderConstruction = ({
@@ -53,12 +66,7 @@ const UnderConstruction = ({
 
         {showPlaceholders && (
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
-            {[1, 2, 3].map(i => (
-              <div
-                key={i}
-                className="aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg animate-pulse"
-              />
-            ))}
+            <SkeletonCard />
           </div>
         )}
       </div>

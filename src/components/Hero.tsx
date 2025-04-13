@@ -1,17 +1,17 @@
 'use client';
 
-import { animate, utils } from 'animejs';
+import { animate } from 'animejs';
 import { useEffect, useRef } from 'react';
+import { SparklesCore } from './ui/sparkles';
 
-const Hero = () => {
-  const textRef = useRef<HTMLDivElement>(null);
-  const codeRef = useRef<HTMLElement>(null);
+export function Sparkles() {
+  const textRef = useRef<HTMLHeadingElement>(null);
 
   // Animation for the text typing effect
   useEffect(() => {
     if (textRef.current) {
       // Split text into spans, preserving spaces
-      const text = "Hi, I'm Kyle";
+      const text = 'Hi, Im Kyle';
       textRef.current.innerHTML = text
         .split(/(\s+)/) // Split by whitespace but keep the spaces
         .map(char => {
@@ -26,20 +26,8 @@ const Hero = () => {
         })
         .join('');
 
-      // Create a wrapper for text
-      const wrapper = document.createElement('div');
-      wrapper.className = 'flex relative';
-
-      // Move all spans into the wrapper
-      while (textRef.current.firstChild) {
-        wrapper.appendChild(textRef.current.firstChild);
-      }
-
-      // Add wrapper back to the container
-      textRef.current.appendChild(wrapper);
-
       // Animate characters
-      const spans = wrapper.querySelectorAll('span');
+      const spans = textRef.current.querySelectorAll('span');
 
       // Create typing animation
       animate(spans, {
@@ -51,97 +39,47 @@ const Hero = () => {
     }
   }, []);
 
-  // JavaScript Object properties animation
-  useEffect(() => {
-    if (codeRef.current) {
-      const myObject = {
-        version: '36',
-        updated_at: '2023-11-15T08:42:17Z',
-        current_role: 'Development Technical Lead',
-        years_of_experience: 100,
-        kids: 10,
-        specializations: ['Frontend Architecture', 'Performance Optimization', 'UI/UX'],
-        projects_completed: 200,
-        soft_skills: [
-          'Team Leadership',
-          'Mentoring',
-          'Technical Communication',
-          'Project Planning',
-        ],
-        debug_level: 'verbose',
-      };
+  return (
+    <div
+      id="hero"
+      className="min-h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden"
+    >
+      <h1
+        ref={textRef}
+        className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20"
+      >
+        {/* Initial content removed, will be populated by animation */}
+      </h1>
+      <div className="w-[40rem] h-40 relative">
+        {/* Gradients */}
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
-      animate(myObject, {
-        current_role: 'Development Technical Lead',
-        years_of_experience: 10,
-        kids: 2,
-        projects_completed: 50,
-        modifier: utils.round(0),
-        duration: 2000,
-        easing: 'easeInOutExpo',
-        direction: 'alternate',
-        onRender: function () {
-          if (codeRef.current) {
-            codeRef.current.innerHTML =
-              '// about-me.json \n' +
-              JSON.stringify(
-                {
-                  version: myObject.version,
-                  updated_at: myObject.updated_at,
-                  current_role: 'Development Technical Lead',
-                  years_of_experience: myObject.years_of_experience,
-                  specializations: myObject.specializations,
-                  soft_skills: myObject.soft_skills,
-                  projects_completed: myObject.projects_completed,
-                  debug_level: myObject.debug_level,
-                  kids: myObject.kids,
-                },
-                null,
-                2
-              );
-          }
-        },
-      });
-    }
-  }, []);
+        {/* Core component */}
+        <SparklesCore
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1200}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+
+        {/* Radial Gradient to prevent sharp edges */}
+        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
+    </div>
+  );
+}
+
+const Hero = () => {
+  // textRef and related useEffect removed
 
   return (
-    <section className="min-h-screen flex items-center bg-white dark:bg-black transition-colors duration-200">
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center sm:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black dark:text-white transition-colors duration-200">
-            <div ref={textRef} className="block typing-text relative h-12"></div>
-          </h1>
-          <div className="mt-6 text-lg sm:text-xl leading-8 text-black dark:text-white transition-colors duration-200 max-w-2xl mx-auto sm:mx-0">
-            <pre className="text-left bg-gray-800 dark:bg-gray-900 rounded-md p-4 overflow-x-auto">
-              <code
-                ref={codeRef}
-                className="text-green-400 dark:text-green-300 font-mono text-sm"
-              >{`// about-me.json
-{
-  "version": "36",
-  "updated_at": "2023-11-15T08:42:17Z",
-  "current_role": "Development Technical Lead",
-  "years_of_experience": 100,
-  "specializations": [
-    "Frontend Architecture",
-    "Performance Optimization",
-    "UI/UX"
-  ],
-  "soft_skills": [
-    "Team Leadership",
-    "Mentoring",
-    "Technical Communication",
-    "Project Planning"
-  ],
-  "projects_completed": 200,
-  "debug_level": "verbose",
-  "kids": 10
-}`}</code>
-            </pre>
-          </div>
-        </div>
-      </div>
+    <section id="home">
+      <Sparkles />
     </section>
   );
 };
