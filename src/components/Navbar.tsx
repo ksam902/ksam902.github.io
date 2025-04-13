@@ -143,11 +143,6 @@ const Navbar = () => {
                 } group`}
               >
                 {label}
-                <div
-                  className={`absolute left-0 bottom-1 h-[1px] bg-black dark:bg-white transition-all duration-300 ${
-                    activeSection === id ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}
-                ></div>
               </Link>
             ))}
           </div>
@@ -178,14 +173,9 @@ const Navbar = () => {
             }`}
           >
             <div className="relative">
-              <span className="[writing-mode:vertical-lr] rotate-180 inline-block">{label}</span>
-              <div
-                className={`absolute inset-0 flex items-center justify-center pointer-events-none ${
-                  activeSection === id ? 'after:h-full' : 'after:h-0 group-hover:after:h-full'
-                } after:w-[1px] after:bg-black dark:after:bg-white after:absolute after:left-1/2 after:top-0 after:transition-all after:duration-300 ${
-                  activeSection === id ? '' : 'after:origin-top'
-                }`}
-              ></div>
+              <span className="[writing-mode:vertical-lr] rotate-180 inline-block group-hover:scale-110 transition-transform duration-300 ease-in-out origin-center">
+                {label}
+              </span>
             </div>
           </Link>
         ))}

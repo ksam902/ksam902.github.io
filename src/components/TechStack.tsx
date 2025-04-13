@@ -19,9 +19,9 @@ const TechStack = () => {
 
   return (
     <section id="tech" className="py-24 bg-gray-50 dark:bg-gray-900">
-      <div className="flex flex-col items-center justify-center gap-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center gap-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          <h2 className="text-2xl font-bold">Current Stack</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Current Stack</h2>
         </div>
         <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-16 gap-y-12 mb-8 md:gap-x-24">
           {/* Next.js */}

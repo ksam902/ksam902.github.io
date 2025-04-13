@@ -2,9 +2,7 @@
 
 Status: In Progress
 Priority: High
-Last Updated: 2024
-
-## 0. Anime setup
+Last Updated: 2025
 
 ## 1. Core Infrastructure Setup
 

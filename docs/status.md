@@ -4,11 +4,13 @@
 
 A modern, performant portfolio website showcasing professional work and skills. Built with Next.js, React, TypeScript, and TailwindCSS, focusing on performance, accessibility, and user experience.
 
-## Currently working on Anime.js
-
 ## Completed Features ✅
+- [x] Change hover and active menu styling for Desktop Navbar component
 
-### Anime.js Integration
+## Currently working on
 
-- [ ] Anime installation
-- [ ] Create component for portfolio site.
+## Future TODOs
+- [ ] GitHub pipelines
+- [ ] optimizations
+- [ ] code review
+- [ ] design tweaks
