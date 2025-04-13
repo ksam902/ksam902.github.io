@@ -16,9 +16,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Check for system preference on mount
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    }
+    // if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //   setTheme('dark');
+    // }
 
     // Apply theme class to document
     document.documentElement.classList.toggle('dark', theme === 'dark');
